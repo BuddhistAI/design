@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BuddhistAI Design</title>
+<meta name="description" content="Colors, type, components and writing rules shared by every BuddhistAI site.">
+<link rel="icon" href="assets/logo-128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+Tibetan:wght@400&display=swap">
+<link rel="stylesheet" href="buddhistai.css">
+<style>
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.sw { border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; background: var(--surface); font-size: 12px; }
+.sw i { display: block; height: 56px; }
+.sw div { padding: 8px 10px; }
+.sw code { background: none; padding: 0; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.demo { display: grid; gap: 16px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.scale > * { margin: 0 0 6px; }
+main section h2 { margin: 0 0 6px; }
+main section > .wrap > p.lede { margin-bottom: 24px; }
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="./"><img class="logo-light" src="assets/logo-128.png" alt=""><img class="logo-dark" src="assets/logo-dark-128.png" alt="">BuddhistAI <span class="brand-sub">Design</span></a>
+  <nav class="site-nav">
+    <a href="#colors">Colors</a><a href="#type">Type</a><a href="#components">Components</a><a href="#voice">Writing</a><a href="#use">Use it</a>
+    <a href="https://github.com/BuddhistAI/design">GitHub</a>
+  </nav>
+</div></header>
+
+<main>
+<div class="wrap" style="padding-block:56px 40px">
+  <div class="eyebrow">BuddhistAI design system 1.0.0</div>
+  <h1 style="margin-top:14px;max-width:16ch">One look for every BuddhistAI site</h1>
+  <p class="lede">The homepage, the leaderboard, the knowledge base and the arena all use these colors, fonts, parts and words. Link one CSS file, or copy the tokens into your own app.</p>
+  <div class="row" style="margin-top:24px">
+    <a class="btn primary" href="#use">Use it in your site</a>
+    <a class="btn ghost" href="https://github.com/BuddhistAI/design/blob/main/VOICE.md">Writing rules</a>
+  </div>
+</div>
+
+<section class="section" id="colors"><div class="wrap">
+  <div class="eyebrow">Colors</div><h2 style="margin-top:8px">Colors</h2>
+  <p class="lede">Cool paper and ink, with three accents that always mean the same thing. Lapis is <b>top performance</b> and links. Saffron is <b>best value</b> and contributing. Green is <b>measured</b> and new leaders. Every color has a dark-mode value; switch your system theme to see it.</p>
+  <div class="swatches" id="sw"></div>
+</div></section>
+
+<section class="section" id="type"><div class="wrap">
+  <div class="eyebrow">Type</div><h2 style="margin-top:8px">Fonts</h2>
+  <p class="lede">Bricolage Grotesque for headings and big numbers. Inter for text. JetBrains Mono for commands and IDs. Noto Serif Tibetan for Tibetan.</p>
+  <div class="grid2">
+    <div class="card scale">
+      <h1 style="font-size:44px">Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <p>Body text is 15px Inter with a line height of 1.6. Keep a paragraph under 62 characters wide.</p>
+      <p class="note">Notes and meta are 13px, muted.</p>
+      <div class="eyebrow">Eyebrow label</div>
+    </div>
+    <div class="card scale">
+      <code>/plugin install buddhist-skills-tibetan@buddhistai</code>
+      <p class="bo" lang="bo">དལ་འབྱོར་གྲུ་ཆེན་རྙེད་དཀའ་ཐོབ་པའི་དུས། །</p>
+      <p><span class="num" style="font:700 22px var(--f-display)">0.962</span> <span class="note">Scores use tabular numbers.</span></p>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="components"><div class="wrap demo">
+  <div><div class="eyebrow">Components</div><h2 style="margin-top:8px">Parts</h2>
+  <p class="lede">Class names match the homepage, so homepage HTML works with this CSS as it is.</p></div>
+
+  <h3>Buttons and chips</h3>
+  <div class="row">
+    <a class="btn primary" href="#">Find the best AI</a>
+    <a class="btn saffron" href="#">Contribute</a>
+    <a class="btn ghost" href="#">Compare models and skills</a>
+    <button class="chip" aria-pressed="true">Tibetan</button>
+    <button class="chip" aria-pressed="false">Sanskrit</button>
+    <button class="chip" disabled>Pali</button>
+    <div class="toggle" role="radiogroup"><button role="radio" aria-checked="true">Skills</button><button role="radio" aria-checked="false">Models</button></div>
+  </div>
+
+  <h3>Labels</h3>
+  <div class="row">
+    <span class="status live">Measured</span>
+    <span class="status need">Needs a benchmark</span>
+    <span class="status comm">Community</span>
+    <span class="tag">toc-extraction-tibetan</span>
+    <span>Skill name<span class="badge top">Top performance</span><span class="badge val">Best value</span><span class="badge ship">In buddhist-skills</span></span>
+  </div>
+
+  <h3>Task card with Top performance and Best value</h3>
+  <div class="cards">
+    <article class="card">
+      <div class="top"><h3>Table of contents</h3><span class="status live">Measured</span></div>
+      <div class="bo" lang="bo">ས་བཅད།</div>
+      <p>Finds the sa-bcad outline headings in a commentary, with their level and position.</p>
+      <div class="picks">
+        <div class="pick top"><span class="lab">Top performance</span><span class="score num">0.962</span><span class="meta">sa-bcad method · Sonnet 5.5 · ≈$1.20 / 100 pages</span></div>
+        <div class="pick val"><span class="lab">Best value</span><span class="score num">0.824</span><span class="meta">GEPA-optimized · Haiku 5.5 · ≈$0.05 / 100 pages</span></div>
+      </div>
+      <div class="foot"><span class="tag">toc-extraction-tibetan</span><a href="#">Leaderboard</a><a href="#">Task repo</a></div>
+    </article>
+    <article class="card empty">
+      <div class="top"><h3>Segmentation</h3><span class="status need">Needs a benchmark</span></div>
+      <p>Split a text into sentences or translation units.</p>
+      <div class="foot"><a href="#">Help build the test set</a><a href="#">Share a skill</a></div>
+    </article>
+    <div style="display:grid;gap:12px;align-content:start">
+      <div class="leader"><span class="lab">New leader · 2026-11-13</span><b>TOC extraction (sa-bcad method)</b><span>Table of contents, Tibetan · 0.962</span></div>
+      <div class="leader open"><span class="lab">Next leader</span><b>Your model or skill here</b><span><a href="#">Paste your repo</a> and we announce the winner.</span></div>
+    </div>
+  </div>
+
+  <h3>Ranked table</h3>
+  <div class="tablebox"><table>
+    <thead><tr><th>#</th><th>Skill</th><th>Model</th><th class="r">Score</th><th class="r">Gain</th><th class="r">Cost / 100 pages</th></tr></thead>
+    <tbody>
+      <tr class="r1"><td><span class="pos">1</span></td><td>TOC extraction (sa-bcad method)<span class="badge top">Top performance</span></td><td>Sonnet 5.5</td><td class="r">0.962</td><td class="r gain up">+0.011</td><td class="r">≈$1.20</td></tr>
+      <tr class="r2"><td><span class="pos">2</span></td><td>TOC extraction (GEPA-optimized)<span class="badge val">Best value</span></td><td>Haiku 5.5</td><td class="r">0.824</td><td class="r gain up">+0.083</td><td class="r">≈$0.05</td></tr>
+      <tr class="base"><td>–</td><td>No skill (plain prompt)</td><td>Haiku 5.5</td><td class="r">0.741</td><td class="r">–</td><td class="r">≈$0.03</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Benchmark maturity</h3>
+  <div class="ladder" aria-label="Maturity levels">
+    <div><b>1 · Example</b><span>Format check only</span></div>
+    <div><b>2 · Draft</b><span>Real items, one author</span></div>
+    <div><b>3 · Reviewed</b><span>Checked by a second reader</span></div>
+    <div><b>4 · Stable</b><span>Held-out set, used in practice</span></div>
+  </div>
+  <p><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i></span> Draft, answer key needs a reader check</p>
+
+  <h3>Workflow chain</h3>
+  <div class="chain"><span>text-cleanup</span><i>→</i><span class="has">toc-extraction</span><i>→</i><span>segmentation</span></div>
+
+  <h3>Install command</h3>
+  <div class="cmd"><code>/plugin marketplace add BuddhistAI/buddhist-skills</code><button class="copy">Copy</button></div>
+
+  <h3>Paste a repo (contribute block)</h3>
+  <div class="dark-block grid2">
+    <div><div class="eyebrow">For AI developers</div><h2 style="margin-top:8px">Share your solution, join the evals</h2>
+      <p>Paste a link and we score it on the open benchmarks for free.</p>
+      <form class="field" onsubmit="return false"><label class="sr" for="r">Link to your solution</label><input id="r" placeholder="github.com/you/your-solution"><button class="btn saffron">Submit</button></form></div>
+    <ol class="steps"><li><span><b>Share</b>Paste a link. Anyone can see it right away.</span></li><li><span><b>Measure</b>We score it on the benchmark for its task.</span></li><li class="done"><span><b>Release</b>If it leads, it goes into buddhist-skills and we announce it.</span></li></ol>
+  </div>
+
+  <h3>Callouts</h3>
+  <div class="grid2"><div class="callout"><b>Note.</b> Only compare rows on the same benchmark version.</div><div class="callout saffron"><b>Help wanted.</b> This task needs a Tibetan reader.</div></div>
+</div></section>
+
+<section class="section" id="voice"><div class="wrap">
+  <div class="eyebrow">Writing</div><h2 style="margin-top:8px">Words</h2>
+  <p class="lede">Many readers speak English as a second language. Write short, literal sentences with no idioms. The full rules are in <a href="https://github.com/BuddhistAI/design/blob/main/VOICE.md">VOICE.md</a>.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>Use</th><th>Not</th></tr></thead>
+    <tbody>
+      <tr><td>Buddhist tasks</td><td>Buddhist texts (as the scope)</td></tr>
+      <tr><td>Top performance</td><td>Best overall, winner</td></tr>
+      <tr><td>Best value</td><td>Cheapest</td></tr>
+      <tr><td>Share → Measure → Release</td><td>Share → Measure → Ship</td></tr>
+      <tr><td>Contributors: WeBuddhist, BDRC, …</td><td>Maintained by WeBuddhist</td></tr>
+      <tr><td>Needs a benchmark. Help build the test set.</td><td>Coming soon</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="section" id="use"><div class="wrap">
+  <div class="eyebrow">Use it</div><h2 style="margin-top:8px">Add it to a site</h2>
+  <p class="lede">Static sites: copy <code>buddhistai.css</code> and the logo files into your site and link them. React or Tailwind: use <code>tokens.js</code> or <code>tailwind.preset.js</code>.</p>
+  <div class="grid2">
+    <div class="card"><h3>HTML</h3>
+<pre><code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Noto+Serif+Tibetan:wght@400&amp;display=swap"&gt;
+&lt;link rel="stylesheet" href="buddhistai.css"&gt;</code></pre></div>
+    <div class="card"><h3>React + Tailwind</h3>
+<pre><code>// tailwind.config.js
+module.exports = {
+  presets: [require('./tailwind.preset.js')],
+};
+// main.tsx
+import './buddhistai.css';
+// &lt;div className="bg-surface text-ink border-line rounded-md"&gt;</code></pre></div>
+  </div>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="wrap cols">
+  <span>BuddhistAI · Open Buddhist AI benchmarks and skills · MIT</span>
+  <span><a href="https://github.com/BuddhistAI">GitHub</a> · <a href="https://buddhistai.github.io/buddhist-benchmarks/">Leaderboard</a></span>
+</div></footer>
+<script>
+const names = ['bg','surface','sunk','ink','muted','line','lapis','lapis-soft','saffron','saffron-soft','good','good-soft','bad','bad-soft'];
+const cs = getComputedStyle(document.documentElement);
+document.getElementById('sw').innerHTML = names.map(n => `<div class="sw"><i style="background:var(--${n})"></i><div><b>${n}</b><br><code>${cs.getPropertyValue('--' + n).trim()}</code></div></div>`).join('');
+</script>
+</body>
+</html>

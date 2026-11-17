@@ -1,0 +1,38 @@
+/* BuddhistAI base: page, type, links, layout helpers. Needs tokens.css. */
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: var(--text-base)/1.6 var(--f-body); }
+a { color: var(--lapis); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--lapis); outline-offset: 2px; border-radius: 4px;
+}
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; letter-spacing: -.01em; line-height: 1.15; }
+h1 { font-size: var(--h1); font-weight: 800; line-height: 1.02; }
+h2 { font-size: var(--h2); font-weight: 800; }
+h3 { font-size: var(--text-lg); font-weight: 700; }
+p, li { max-width: var(--reading); }
+code, kbd, pre, .mono { font-family: var(--f-mono); font-size: .9em; }
+:not(pre) > code { background: var(--sunk); border-radius: var(--r-xs); padding: .1em .35em; }
+pre { background: var(--sunk); border-radius: var(--r-sm); padding: 12px 14px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+.num { font-variant-numeric: tabular-nums; }
+[lang="bo"], .bo { font-family: var(--f-bo); font-size: 1.12em; line-height: 1.6; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+
+/* layout */
+.wrap {
+  max-width: var(--max-width); margin: 0 auto;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+.wrap.narrow { max-width: 920px; }
+.section { padding-block: var(--s-10); border-top: 1px solid var(--line); }
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+
+/* text styles */
+.eyebrow { font: 600 12px/1 var(--f-body); letter-spacing: .09em; text-transform: uppercase; color: var(--saffron); }
+.lede { color: var(--muted); max-width: var(--reading); margin: 8px 0 0; font-size: var(--text-lg); }
+.muted { color: var(--muted); }
+.note { font-size: var(--text-sm); color: var(--muted); }
+.label { font: 600 var(--text-xs)/1 var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

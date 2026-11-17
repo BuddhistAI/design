@@ -1,0 +1,93 @@
+/* BuddhistAI design tokens 1.0.0. Generated from tokens.json by scripts/build.py. Do not edit. */
+/* Fonts: <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+Tibetan:wght@400&display=swap"> */
+:root {
+  --bg: #F6F7F9;
+  --surface: #FFFFFF;
+  --sunk: #EDEFF3;
+  --ink: #141B2D;
+  --muted: #5A6276;
+  --line: #DCE0E8;
+  --lapis: #2443A6;
+  --lapis-soft: #E6EBFA;
+  --saffron: #9C5B00;
+  --saffron-soft: #FBEFD9;
+  --good: #1F7A4D;
+  --good-soft: #DFF2E7;
+  --bad: #B42318;
+  --bad-soft: #FDE7E4;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: Inter, "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --f-bo: "Noto Serif Tibetan", "Microsoft Himalaya", serif;
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 18px;
+  --h2: clamp(26px, 3.2vw, 36px);
+  --h1: clamp(36px, 5.4vw, 64px);
+  --score: 22px;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-7: 28px;
+  --s-8: 36px;
+  --s-9: 48px;
+  --s-10: 64px;
+  --r-xs: 5px;
+  --r-sm: 8px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 18px;
+  --r-pill: 999px;
+  --r: 10px;
+  --shadow-panel: 0 12px 40px -24px rgba(20,27,45,.35);
+  --max-width: 1120px;
+  --gutter: 16px;
+  --reading: 62ch;
+  --medal-gold: #E8B931;
+  --medal-gold-on: #3A2A00;
+  --medal-silver: #C4C8CE;
+  --medal-silver-on: #23262A;
+  --medal-bronze: #CF8F5A;
+  --medal-bronze-on: #2E1700;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1220;
+    --surface: #161B2C;
+    --sunk: #1D2338;
+    --ink: #E9ECF4;
+    --muted: #9AA3B8;
+    --line: #2A3150;
+    --lapis: #8EA6F5;
+    --lapis-soft: #1E2850;
+    --saffron: #F0B04A;
+    --saffron-soft: #3A2A10;
+    --good: #5FD39A;
+    --good-soft: #123326;
+    --bad: #F97066;
+    --bad-soft: #3B1512;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1220;
+  --surface: #161B2C;
+  --sunk: #1D2338;
+  --ink: #E9ECF4;
+  --muted: #9AA3B8;
+  --line: #2A3150;
+  --lapis: #8EA6F5;
+  --lapis-soft: #1E2850;
+  --saffron: #F0B04A;
+  --saffron-soft: #3A2A10;
+  --good: #5FD39A;
+  --good-soft: #123326;
+  --bad: #F97066;
+  --bad-soft: #3B1512;
+  color-scheme: dark;
+}
