@@ -15,7 +15,7 @@ One look for every BuddhistAI site: the homepage, the [leaderboard](https://budd
 | `buddhistai.css` | Tokens + base + components in one file. Link or copy this. |
 | `tailwind.preset.js` | Tailwind preset (colors, fonts, radius as CSS variables). |
 | `tokens.js` | Tokens as a JS module, for React code and charts. |
-| `assets/` | Logo in ink (`logo.png`) and for dark backgrounds (`logo-dark.png`), 128px versions, org avatar. |
+| `assets/` | Logo in ink (`logo.png`) and for dark backgrounds (`logo-dark.png`), 128px versions, org avatar, org profile banners (`banner-light.svg`, `banner-dark.svg`). |
 | `VOICE.md` | Writing rules: plain English, our words, neutral credits. |
 | `index.html` | The style guide page. |
 
