@@ -21,7 +21,7 @@ Many readers speak English as a second or third language. Many use a translation
 | Best value | Cheapest, budget pick | The top score among options that cost 20% of the top performance cost or less. |
 | Share → Measure → Release | Share → Measure → Ship | The three steps for a contribution. |
 | Measured | Promoted, certified | Has a score on a benchmark. |
-| Community, not yet measured | Unofficial, unverified | Shared in `community/`, no score yet. |
+| Community, not yet measured | Unofficial, unverified | Shared in the prompt library, no score yet. |
 | Needs a benchmark | Coming soon | A task with no test set yet. Ask for help. |
 | Skill | Prompt pack, agent | A folder with a SKILL.md that does one task in one language. |
 | Model | LLM (in headings) | An AI model, used with no skill or with a skill. |
